@@ -35,3 +35,9 @@ class ChatHandler : TextWebSocketHandler() {
     }
 
 }
+
+data class ChatTO(
+        var toId: Int,
+        var fromId: Int,
+        var content: String
+)

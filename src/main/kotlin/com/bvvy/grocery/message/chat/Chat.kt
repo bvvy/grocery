@@ -36,5 +36,7 @@ data class Chat(
         val content: String,
 
         @Column(name = "create_date")
-        val createDate: LocalDateTime = LocalDateTime.now()
+        val createDate: LocalDateTime = LocalDateTime.now(),
+
+        val read: Boolean = false
 )
