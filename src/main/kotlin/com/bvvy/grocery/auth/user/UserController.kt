@@ -1,23 +1,27 @@
 package com.bvvy.grocery.auth.user
 
+import com.bvvy.grocery.er.Messager
+import com.bvvy.grocery.er.Responser
 import org.hibernate.validator.constraints.Length
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import javax.validation.constraints.NotEmpty
 
 @RestController
-class UserController(val userRepository: UserRepository) {
+class UserController(val userService: UserService) {
 
     @PostMapping("/v1/join")
-    fun join(@RequestBody joinDto: JoinDto) {
+    fun join(@RequestBody joinDto: JoinDto): ResponseEntity<Messager> {
 
         val user = User(
                 password = joinDto.password,
                 nickname = joinDto.account,
                 phone = joinDto.account,
                 enabled = true)
-        userRepository.save(user)
+        userService.save(user)
+        return Responser.created()
     }
 }
 
