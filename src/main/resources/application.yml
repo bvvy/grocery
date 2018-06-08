@@ -18,13 +18,7 @@ spring:
     username: postgres
     password: bvvyeh288
     url: jdbc:postgresql://localhost:5432/grocery
-  security:
-    oauth2:
-      client:
-        registration:
-          github:
-            client-id: 1c23891103858487501e
-            client-secret: f33376b3bdf95b4c4ef2645b0358b183af8afb42
+
 logging:
   level:
     org:

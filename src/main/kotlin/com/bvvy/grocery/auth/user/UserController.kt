@@ -4,7 +4,6 @@ import com.bvvy.grocery.er.Messager
 import com.bvvy.grocery.er.Responser
 import org.hibernate.validator.constraints.Length
 import org.springframework.http.ResponseEntity
-import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -36,15 +35,6 @@ class UserController(val userService: UserService) {
 
 }
 
-@Controller
-class LoginController {
-
-    @GetMapping("/login/oauth/code/github")
-    fun githubLogin(map: HashMap<String, String>): String {
-
-        return "redirect:http://127.0.0.1:8080/#/msg/chat"
-    }
-}
 
 data class JoinDto(
         @NotEmpty

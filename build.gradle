@@ -75,6 +75,7 @@ dependencies {
     //queryDsl
     compile 'com.querydsl:querydsl-jpa'
     kapt "com.querydsl:querydsl-apt:${queryDslVersion}:jpa"
+    compileOnly "org.springframework.boot:spring-boot-configuration-processor"
     //test
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('io.projectreactor:reactor-test')

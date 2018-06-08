@@ -16,7 +16,6 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 @EnableWebSocket
 class WebSocketConfig(val chatHandler: ChatHandler) : WebSocketConfigurer {
 
-
     override fun registerWebSocketHandlers(registry: WebSocketHandlerRegistry) {
         registry.addHandler(chatHandler, "/myHandler")
                 .setAllowedOrigins("http://localhost:8080")
