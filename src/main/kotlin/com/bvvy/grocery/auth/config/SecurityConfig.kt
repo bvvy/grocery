@@ -17,15 +17,14 @@ class LoginConfig(val dataSource: DataSource) : WebSecurityConfigurerAdapter() {
         http
                 .csrf().disable()
                 .httpBasic()
+                .and().formLogin()
+                .and().logout()
                 .and()
-                .logout().and()
                 .authorizeRequests()
-                .antMatchers("/gs-guide-websocket/**", "/", "/login/**",
-                        "/v1/label/**", "/swagger*/**", "/webjars/**", "/v2/api-docs", "/v1/chat/**", "/v1/daily/**", "/myHandler", "/v1/join").permitAll()
+                .antMatchers("/", "/login/**",
+                        "/v1/chat/**", "/myHandler", "/v1/join").permitAll()
                 .anyRequest()
                 .authenticated()
-                .and()
-                .oauth2Login()
     }
 
     override fun configure(auth: AuthenticationManagerBuilder) {
