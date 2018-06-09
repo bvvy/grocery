@@ -16,6 +16,10 @@ class UserServiceImpl(val userRepository: UserRepository,val passwordEncoder: Pa
         userRepository.save(user)
     }
 
+    override fun oauthSave(user: User) {
+        userRepository.save(user)
+    }
+
     override fun loadByPhone(phone: String): User? {
         return userRepository.findByPhone(phone)
     }

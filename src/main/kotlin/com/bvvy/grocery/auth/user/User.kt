@@ -22,6 +22,8 @@ class User(
 
         var gender: String = "",
 
+        val avatar: String = "",
+
         var enabled: Boolean = false,
 
         @Column(name = "create_date_time")

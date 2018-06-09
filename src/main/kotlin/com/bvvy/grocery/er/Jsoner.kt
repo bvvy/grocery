@@ -4,6 +4,7 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 
 object Jsoner {
+
     var mapper = jacksonObjectMapper()
 
     fun toJson(obj: Any): String = mapper.writeValueAsString(obj)

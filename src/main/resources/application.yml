@@ -18,7 +18,9 @@ spring:
     username: postgres
     password: bvvyeh288
     url: jdbc:postgresql://localhost:5432/grocery
-
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    property-naming-strategy: SNAKE_CASE
 logging:
   level:
     org:
