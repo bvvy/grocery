@@ -3,6 +3,7 @@ buildscript {
         kotlinVersion = '1.2.41'
         springBootVersion = '2.0.2.RELEASE'
         queryDslVersion = '4.1.4'
+        securityOAuth2Version='2.3.3.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -74,6 +75,7 @@ dependencies {
     runtime('org.postgresql:postgresql')
     //queryDsl
     compile 'com.querydsl:querydsl-jpa'
+    compile "org.springframework.security.oauth:spring-security-oauth2:${securityOAuth2Version}"
     kapt "com.querydsl:querydsl-apt:${queryDslVersion}:jpa"
     compileOnly "org.springframework.boot:spring-boot-configuration-processor"
     //test

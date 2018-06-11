@@ -5,6 +5,7 @@ import com.bvvy.grocery.auth.user.UserRepository
 import com.bvvy.grocery.auth.user.UserService
 import com.bvvy.grocery.er.Responser
 import org.springframework.boot.web.client.RestTemplateBuilder
+import org.springframework.core.annotation.Order
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
 import org.springframework.http.ResponseEntity
