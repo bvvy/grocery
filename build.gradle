@@ -75,9 +75,10 @@ dependencies {
     runtime('org.postgresql:postgresql')
     //queryDsl
     compile 'com.querydsl:querydsl-jpa'
-    compile "org.springframework.security.oauth:spring-security-oauth2:${securityOAuth2Version}"
     kapt "com.querydsl:querydsl-apt:${queryDslVersion}:jpa"
-    compileOnly "org.springframework.boot:spring-boot-configuration-processor"
+//    compile "org.springframework.security.oauth:spring-security-oauth2:${securityOAuth2Version}"
+    //security
+    compile "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.0.1.RELEASE"
     //test
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('io.projectreactor:reactor-test')

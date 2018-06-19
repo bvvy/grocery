@@ -21,6 +21,10 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     property-naming-strategy: SNAKE_CASE
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:12222/user
 logging:
   level:
     org:
