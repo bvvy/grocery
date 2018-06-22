@@ -1,5 +1,6 @@
 package com.bvvy.grocery.message.chat
 
+import com.querydsl.jpa.impl.JPAQuery
 import org.springframework.data.domain.Pageable
 import org.springframework.http.ResponseEntity
 import org.springframework.security.core.Authentication
@@ -18,9 +19,10 @@ class ChatController(val chatRepository: ChatRepository) {
         return SecurityContextHolder.getContext().authentication
     }
 
-    @RequestMapping("/{userId}/messages")
+    @GetMapping("/{userId}/messages")
     fun userMessages(pageable: Pageable, @PathVariable userId: Int): ResponseEntity<Iterable<Chat>> {
-        val predicate = QChat.chat.fromId.eq(userId)
+        val chat = QChat.chat
+        val predicate = chat.fromId.eq(userId)
         return ResponseEntity.ok(chatRepository.findAll(predicate, pageable))
     }
 
