@@ -1,7 +1,7 @@
 package com.bvvy.grocery.message.chat
 
-import com.bvvy.grocery.er.Jsoner
-import com.bvvy.grocery.er.Messager
+import com.bvvy.grocery.core.er.Jsoner
+import com.bvvy.grocery.core.er.Messager
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.web.socket.TextMessage

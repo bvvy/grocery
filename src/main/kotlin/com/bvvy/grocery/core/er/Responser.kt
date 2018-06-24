@@ -1,4 +1,4 @@
-package com.bvvy.grocery.er
+package com.bvvy.grocery.core.er
 
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

@@ -1,3 +1,3 @@
-package com.bvvy.grocery.er
+package com.bvvy.grocery.core.er
 
 data class Messager(var code: String)

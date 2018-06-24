@@ -1,3 +1,3 @@
-package com.bvvy.grocery.exception
+package com.bvvy.grocery.core.exception
 
 class AlreadyExistsException : RuntimeException()

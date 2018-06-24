@@ -1,4 +1,4 @@
-package com.bvvy.grocery.er
+package com.bvvy.grocery.core.er
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue

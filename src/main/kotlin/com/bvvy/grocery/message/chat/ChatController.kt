@@ -1,6 +1,5 @@
 package com.bvvy.grocery.message.chat
 
-import com.querydsl.jpa.impl.JPAQuery
 import org.springframework.data.domain.Pageable
 import org.springframework.http.ResponseEntity
 import org.springframework.security.core.Authentication
